@@ -42,6 +42,25 @@ topology:
       cmd: --config.file=/etc/prometheus/prometheus.yml
       ports:
         - 9090:9090
+
+    grafana:
+      kind: linux
+      mgmt-ipv4: 172.100.100.43
+      image: grafana/grafana:latest
+      binds:
+        - config/grafana/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yaml:ro
+        - config/grafana/dashboards.yml:/etc/grafana/provisioning/dashboards/dashboards.yaml:ro
+        - config/grafana/dashboards:/var/lib/grafana/dashboards
+      ports:
+        - 3000:3000
+      env:        
+        # env vars to enable anonymous access
+        GF_ORG_ROLE: "Admin"
+        GF_ORG_NAME: "Main Org"
+        GF_AUTH_ANONYMOUS_ENABLED: "true"
+        GF_AUTH_ANONYMOUS_ORG_ROLE: Admin
+        GF_AUTH_ANONYMOUS: "true"
+        GF_AUTH_OAUTH_AUTO_LOGIN: "true"    
               
     PC1:
       kind: linux
