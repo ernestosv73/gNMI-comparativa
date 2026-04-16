@@ -12,7 +12,7 @@ scrape_configs:
 
     static_configs:
       - targets:
-          - '172.100.100.8'          # Dispositivo a monitorear vía SNMP
+          - 'srlswitch2'          # Dispositivo a monitorear vía SNMP
         labels:
           site: 'lab'              # Etiqueta opcional para identificar el sitio
           study: 'snmp_vs_gnmi'    # Útil para el estudio comparativo
@@ -35,4 +35,4 @@ scrape_configs:
 
       # Paso 3: redirigir el scrape al SNMP Exporter, no al dispositivo
       - target_label: __address__
-        replacement: 172.100.100.3:9116
+        replacement: snmp-exporter:9116
