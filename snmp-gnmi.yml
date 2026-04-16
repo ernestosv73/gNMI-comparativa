@@ -16,7 +16,6 @@ topology:
     # Nokia SRL Linux Layer 2 Device
     srlswitch2:
       kind: nokia_srlinux
-      mgmt-ipv4: 172.100.100.8
       image: ghcr.io/nokia/srlinux:24.10.1
       type: ixr-d3
       startup-config: configs/srlswitch.cfg 
