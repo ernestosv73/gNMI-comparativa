@@ -27,8 +27,7 @@ subscriptions:
       - /interface[name=ethernet-1/4]/statistics/out-unicast-packets
       - /interface[name=ethernet-1/4]/statistics/out-broadcast-packets
       - /interface[name=ethernet-1/4]/statistics/out-octets
-      - /interface[name=*]/traffic-rate
-
+      
 outputs:
   file_output:
     type: file
