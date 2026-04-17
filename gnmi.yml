@@ -77,7 +77,7 @@ topology:
       kind: linux
       image: docker.io/esanchezv/hellt-gnmic:latest
       binds:
-        - config/gnmic/gnmic-config.yml:/gnmic-config.yml:ro
+        - configs/gnmic-config.yml:/gnmic-config.yml:ro
       exec: 
         - mkdir /data
         - chmod +x /data
@@ -98,7 +98,7 @@ topology:
     #- endpoints: ["arista-router:eth2", "srlswitch2:e1-2"]
       #mtu: 1500  
     - endpoints: ["srlrouter:e1-2", "srlswitch2:e1-1"]  
-    - endpoints: ["alpine:eth1", "srlswitch2:e1-5"]
+    - endpoints: ["gNMIc:eth1", "srlswitch2:e1-5"]
       mtu: 1500  
       
     
