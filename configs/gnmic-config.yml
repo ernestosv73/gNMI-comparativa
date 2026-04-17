@@ -15,11 +15,18 @@ subscriptions:
     stream-mode: sample
     sample-interval: 5s
     paths:
-      - /interface[name=*]/statistics/in-discarded-packets
-      - /interface[name=*]/statistics/in-error-packets
-      - /interface[name=*]/statistics/in-multicast-packets
-      - /interface[name=*]/statistics/in-unicast-packets
-      - /interface[name=*]/statistics/in-broadcast-packets
+      - /interface[name=ethernet-1/4]/statistics/in-discarded-packets
+      - /interface[name=ethernet-1/4]/statistics/in-error-packets
+      - /interface[name=ethernet-1/4]/statistics/in-multicast-packets
+      - /interface[name=ethernet-1/4]/statistics/in-unicast-packets
+      - /interface[name=ethernet-1/4]/statistics/in-broadcast-packets
+      - /interface[name=ethernet-1/4]/statistics/in-octets
+      - /interface[name=ethernet-1/4]/statistics/out-discarded-packets
+      - /interface[name=ethernet-1/4]/statistics/out-error-packets
+      - /interface[name=ethernet-1/4]/statistics/out-multicast-packets
+      - /interface[name=ethernet-1/4]/statistics/out-unicast-packets
+      - /interface[name=ethernet-1/4]/statistics/out-broadcast-packets
+      - /interface[name=ethernet-1/4]/statistics/out-octets
       - /interface[name=*]/traffic-rate
 
 outputs:
