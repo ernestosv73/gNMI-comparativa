@@ -1,4 +1,4 @@
-name: comparativa
+name: gnmi-comparativa
 
 mgmt:
   network: gnmi
