@@ -6,8 +6,8 @@ encoding: json_ietf
 timeout: 10s
 
 targets:
-  srlrouter:
-    address: srlrouter:57400
+  srlswitch2:
+    address: srlswitch2:57400
     
 subscriptions:    
   srl-if-stats:
