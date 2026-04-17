@@ -1,8 +1,8 @@
 name: comparativa
 
 mgmt:
-  network: snmp-gnmi
-  ipv4-subnet: 172.100.100.0/24  
+  network: gnmi
+  ipv4-subnet: 172.110.110.0/24  
   
 topology:
   nodes:
@@ -29,13 +29,13 @@ topology:
       
     #arista-router:
       #kind: arista_veos
-      #mgmt-ipv4: 172.100.100.7
+      #mgmt-ipv4: 172.110.110.7
       #image: vrnetlab/arista_veos:4.35.1F
       #startup-config: configs/myconfig.txt      
 
     prometheus:
       kind: linux
-      mgmt-ipv4: 172.100.100.42
+      mgmt-ipv4: 172.110.110.42
       image: quay.io/prometheus/prometheus:v2.54.1
       binds:
         - config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
@@ -45,7 +45,7 @@ topology:
 
     grafana:
       kind: linux
-      mgmt-ipv4: 172.100.100.43
+      mgmt-ipv4: 172.110.110.43
       image: grafana/grafana:latest
       binds:
         - config/grafana/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yaml:ro
@@ -72,14 +72,7 @@ topology:
       exec:
          - ip -6 addr add 2001:db8:10::100/64 dev eth1
     
-    snmp-exporter:
-      kind: linux
-      image: prom/snmp-exporter:latest
-      #binds:
-        #- configs/snmp_exporter/snmp.yml:/etc/snmp_exporter/snmp.yml:ro
-      ports:
-        - 9116:9116
-    
+        
     alpine:
       kind: linux
       image: esanchezv/alpine-python3:latest
@@ -104,8 +97,6 @@ topology:
     - endpoints: ["srlrouter:e1-1", "srlswitch:e1-1"]
       #mtu: 1500
     #- endpoints: ["arista-router:eth1", "srlswitch:e1-2"]
-      #mtu: 1500
-    #- endpoints: ["cisco-router:Ethernet0/1", "srlswitch:e1-3"]
       #mtu: 1500
     - endpoints: ["traffic-gen:eth1", "srlswitch:e1-5"]
       mtu: 1500
