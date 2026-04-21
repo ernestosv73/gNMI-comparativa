@@ -6,13 +6,7 @@ mgmt:
   
 topology:
   nodes:
-    # Nokia SRL Linux Layer 2 Device
-    srlswitch:
-      kind: nokia_srlinux
-      image: ghcr.io/nokia/srlinux:24.10.1
-      type: ixr-d3
-      startup-config: configs/srlswitch.cfg
-
+   
     # Nokia SRL Linux Layer 2 Device
     srlswitch2:
       kind: nokia_srlinux
@@ -74,13 +68,7 @@ topology:
       kind: linux
       image: docker.io/esanchezv/kaliipv6:latest
     
-    traffic-gen:
-      kind: linux
-      image: docker.io/esanchezv/kaliipv6:latest
-      exec:
-         - ip -6 addr add 2001:db8:10::100/64 dev eth1
-    
-        
+          
     gNMIc:
       kind: linux
       image: docker.io/esanchezv/hellt-gnmic:latest
@@ -93,19 +81,14 @@ topology:
             
     
   links:
-    - endpoints: ["srlrouter:e1-1", "srlswitch:e1-1"]
+    - endpoints: ["srlrouter:e1-1", "srlswitch2:e1-1"]
       #mtu: 1500
-    #- endpoints: ["arista-router:eth1", "srlswitch:e1-2"]
-      #mtu: 1500
-    - endpoints: ["traffic-gen:eth1", "srlswitch:e1-5"]
-      mtu: 1500
     - endpoints: ["PC1:eth1", "srlswitch2:e1-2"]
       mtu: 1500
     - endpoints: ["PC2:eth1", "srlswitch2:e1-3"]
       mtu: 1500
     - endpoints: ["PC3:eth1", "srlswitch2:e1-4"]
       mtu: 1500  
-    - endpoints: ["srlrouter:e1-2", "srlswitch2:e1-1"]  
     - endpoints: ["gNMIc:eth1", "srlswitch2:e1-5"]
       mtu: 1500  
       
