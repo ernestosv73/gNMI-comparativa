@@ -89,8 +89,8 @@ topology:
       mtu: 1500
     - endpoints: ["PC3:eth1", "srlswitch2:e1-4"]
       mtu: 1500  
-    - endpoints: ["gNMIc:eth1", "srlswitch2:e1-5"]
-      mtu: 1500  
+    #- endpoints: ["gNMIc:eth1", "srlswitch2:e1-5"]
+      #mtu: 1500  
       
     
      
