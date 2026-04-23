@@ -27,6 +27,8 @@ subscriptions:
       - /interface[name=ethernet-1/*]/statistics/out-unicast-packets
       - /interface[name=ethernet-1/*]/statistics/out-broadcast-packets
       - /interface[name=ethernet-1/*]/statistics/out-octets
+      - /interface[name=ethernet-1/*]/traffic-rate/in-bps
+      - /interface[name=ethernet-1/*]/traffic-rate/out-bps
       
 outputs:
   
