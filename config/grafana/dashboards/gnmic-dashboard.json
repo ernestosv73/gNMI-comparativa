@@ -901,7 +901,7 @@
           "refId": "A"
         }
       ],
-      "title": "Stats In octets Traffic rate In",
+      "title": "Traffic Rate In Octets",
       "type": "timeseries"
     },
     {
