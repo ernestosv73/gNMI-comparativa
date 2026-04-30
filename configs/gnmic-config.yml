@@ -29,6 +29,13 @@ subscriptions:
       - /interface[name=ethernet-1/*]/statistics/out-octets
       - /interface[name=ethernet-1/*]/traffic-rate/in-bps
       - /interface[name=ethernet-1/*]/traffic-rate/out-bps
+
+  srl-bridge-table:
+    mode: stream
+    stream-mode: sample
+    sample-interval: 5s
+    paths:
+      - /network-instance[name=lanswitch]/bridge-table/statistics/total-entries    
       
 outputs:
   
