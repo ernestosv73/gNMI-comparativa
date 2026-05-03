@@ -13,7 +13,7 @@ subscriptions:
   srl-if-stats:
     mode: stream
     stream-mode: on-change
-    heartbeat-interval: 1s
+    heartbeat-interval: 5s
     suppress-redundant: true
     paths:
       - /interface[name=ethernet-1/*]/statistics/in-discarded-packets
