@@ -278,196 +278,6 @@
         "x": 0,
         "y": 8
       },
-      "id": 2,
-      "options": {
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": true
-        },
-        "tooltip": {
-          "hideZeros": false,
-          "mode": "single",
-          "sort": "none"
-        }
-      },
-      "pluginVersion": "12.4.1",
-      "targets": [
-        {
-          "editorMode": "builder",
-          "expr": "irate(srl_nokia_interfaces_interface_statistics_in_multicast_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
-          "legendFormat": "__auto",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "title": "irate() In Multicast Pkts",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "barWidthFactor": 0.6,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "showValues": false,
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": 0
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "pps"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 12,
-        "y": 8
-      },
-      "id": 9,
-      "options": {
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": true
-        },
-        "tooltip": {
-          "hideZeros": false,
-          "mode": "single",
-          "sort": "none"
-        }
-      },
-      "pluginVersion": "12.4.1",
-      "targets": [
-        {
-          "editorMode": "builder",
-          "expr": "irate(srl_nokia_interfaces_interface_statistics_out_multicast_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
-          "legendFormat": "__auto",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "title": "irate() Out Multicast Pkts",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "barWidthFactor": 0.6,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "showValues": false,
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": 0
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "pps"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 0,
-        "y": 16
-      },
       "id": 12,
       "options": {
         "legend": {
@@ -485,8 +295,8 @@
       "pluginVersion": "12.4.1",
       "targets": [
         {
-          "editorMode": "builder",
-          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_multicast_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
+          "editorMode": "code",
+          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_multicast_packets{subscription_name=\"srl-if-stats-on-change\"}[20s])",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -561,7 +371,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 16
+        "y": 8
       },
       "id": 11,
       "options": {
@@ -580,8 +390,8 @@
       "pluginVersion": "12.4.1",
       "targets": [
         {
-          "editorMode": "builder",
-          "expr": "rate(srl_nokia_interfaces_interface_statistics_out_multicast_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
+          "editorMode": "code",
+          "expr": "rate(srl_nokia_interfaces_interface_statistics_out_multicast_packets{subscription_name=\"srl-if-stats-on-change\"}[20s])",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -656,7 +466,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 24
+        "y": 16
       },
       "id": 1,
       "options": {
@@ -755,7 +565,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 24
+        "y": 16
       },
       "id": 8,
       "options": {
@@ -850,197 +660,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 32
-      },
-      "id": 4,
-      "options": {
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": true
-        },
-        "tooltip": {
-          "hideZeros": false,
-          "mode": "single",
-          "sort": "none"
-        }
-      },
-      "pluginVersion": "12.4.1",
-      "targets": [
-        {
-          "editorMode": "builder",
-          "expr": "irate(srl_nokia_interfaces_interface_statistics_in_discarded_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
-          "legendFormat": "__auto",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "title": "In Discard Pkts",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "barWidthFactor": 0.6,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "showValues": false,
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": 0
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "pps"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 12,
-        "y": 32
-      },
-      "id": 3,
-      "options": {
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": true
-        },
-        "tooltip": {
-          "hideZeros": false,
-          "mode": "single",
-          "sort": "none"
-        }
-      },
-      "pluginVersion": "12.4.1",
-      "targets": [
-        {
-          "editorMode": "builder",
-          "expr": "irate(srl_nokia_interfaces_interface_statistics_in_error_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
-          "legendFormat": "__auto",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "title": "In Error Pkts",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "barWidthFactor": 0.6,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "showValues": false,
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": 0
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "pps"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 0,
-        "y": 40
+        "y": 24
       },
       "id": 13,
       "options": {
@@ -1059,14 +679,14 @@
       "pluginVersion": "12.4.1",
       "targets": [
         {
-          "editorMode": "builder",
-          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_discarded_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
+          "editorMode": "code",
+          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_discarded_packets{subscription_name=\"srl-if-stats-on-change\"}[20s])",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
         }
       ],
-      "title": "In Discard Pkts con rate",
+      "title": "rate() In Discard Pkts",
       "type": "timeseries"
     },
     {
@@ -1135,7 +755,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 40
+        "y": 24
       },
       "id": 14,
       "options": {
@@ -1154,14 +774,14 @@
       "pluginVersion": "12.4.1",
       "targets": [
         {
-          "editorMode": "builder",
-          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_error_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
+          "editorMode": "code",
+          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_error_packets{subscription_name=\"srl-if-stats-on-change\"}[20s])",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
         }
       ],
-      "title": "In Error Pkts con rate",
+      "title": "rate() In Error Pkts",
       "type": "timeseries"
     },
     {
@@ -1230,7 +850,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 48
+        "y": 32
       },
       "id": 5,
       "options": {
@@ -1325,7 +945,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 48
+        "y": 32
       },
       "id": 10,
       "options": {
