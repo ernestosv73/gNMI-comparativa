@@ -295,8 +295,8 @@
       "pluginVersion": "12.4.1",
       "targets": [
         {
-          "editorMode": "code",
-          "expr": "irate(srl_nokia_interfaces_interface_statistics_in_multicast_packets{subscription_name=\"srl-if-stats\"}[1m])",
+          "editorMode": "builder",
+          "expr": "irate(srl_nokia_interfaces_interface_statistics_in_multicast_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -390,8 +390,8 @@
       "pluginVersion": "12.4.1",
       "targets": [
         {
-          "editorMode": "code",
-          "expr": "irate(srl_nokia_interfaces_interface_statistics_out_multicast_packets{subscription_name=\"srl-if-stats\"}[1m])",
+          "editorMode": "builder",
+          "expr": "irate(srl_nokia_interfaces_interface_statistics_out_multicast_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -485,8 +485,8 @@
       "pluginVersion": "12.4.1",
       "targets": [
         {
-          "editorMode": "code",
-          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_multicast_packets{subscription_name=\"srl-if-stats\"}[1m])",
+          "editorMode": "builder",
+          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_multicast_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -580,8 +580,8 @@
       "pluginVersion": "12.4.1",
       "targets": [
         {
-          "editorMode": "code",
-          "expr": "rate(srl_nokia_interfaces_interface_statistics_out_multicast_packets{subscription_name=\"srl-if-stats\"}[1m])",
+          "editorMode": "builder",
+          "expr": "rate(srl_nokia_interfaces_interface_statistics_out_multicast_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -680,7 +680,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "builder",
-          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_unicast_packets{subscription_name=\"srl-if-stats\"}[1m])",
+          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_unicast_packets{subscription_name=\"srl-if-stats-stream\"}[1m])",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -749,32 +749,7 @@
           },
           "unit": "pps"
         },
-        "overrides": [
-          {
-            "__systemRef": "hideSeriesFrom",
-            "matcher": {
-              "id": "byNames",
-              "options": {
-                "mode": "exclude",
-                "names": [
-                  "{instance=\"gNMIc:9273\", interface_name=\"ethernet-1/1\", job=\"gnmic\", source=\"srlswitch2\", subscription_name=\"srl-if-stats\"}"
-                ],
-                "prefix": "All except:",
-                "readOnly": true
-              }
-            },
-            "properties": [
-              {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": false,
-                  "tooltip": true,
-                  "viz": true
-                }
-              }
-            ]
-          }
-        ]
+        "overrides": []
       },
       "gridPos": {
         "h": 8,
@@ -800,7 +775,7 @@
       "targets": [
         {
           "editorMode": "builder",
-          "expr": "rate(srl_nokia_interfaces_interface_statistics_out_unicast_packets{subscription_name=\"srl-if-stats\"}[1m])",
+          "expr": "rate(srl_nokia_interfaces_interface_statistics_out_unicast_packets{subscription_name=\"srl-if-stats-stream\"}[1m])",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -895,7 +870,7 @@
       "targets": [
         {
           "editorMode": "builder",
-          "expr": "irate(srl_nokia_interfaces_interface_statistics_in_discarded_packets{subscription_name=\"srl-if-stats\"}[1m])",
+          "expr": "irate(srl_nokia_interfaces_interface_statistics_in_discarded_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -989,8 +964,8 @@
       "pluginVersion": "12.4.1",
       "targets": [
         {
-          "editorMode": "code",
-          "expr": "irate(srl_nokia_interfaces_interface_statistics_in_error_packets{subscription_name=\"srl-if-stats\"}[1m])",
+          "editorMode": "builder",
+          "expr": "irate(srl_nokia_interfaces_interface_statistics_in_error_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -1084,8 +1059,8 @@
       "pluginVersion": "12.4.1",
       "targets": [
         {
-          "editorMode": "code",
-          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_discarded_packets{subscription_name=\"srl-if-stats\"}[1m])",
+          "editorMode": "builder",
+          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_discarded_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -1179,8 +1154,8 @@
       "pluginVersion": "12.4.1",
       "targets": [
         {
-          "editorMode": "code",
-          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_error_packets{subscription_name=\"srl-if-stats\"}[1m])",
+          "editorMode": "builder",
+          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_error_packets{subscription_name=\"srl-if-stats-on-change\"}[1m])",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -1274,8 +1249,8 @@
       "pluginVersion": "12.4.1",
       "targets": [
         {
-          "editorMode": "code",
-          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_octets{subscription_name=\"srl-if-stats\"}[1m]) * 8",
+          "editorMode": "builder",
+          "expr": "rate(srl_nokia_interfaces_interface_statistics_in_octets{subscription_name=\"srl-if-stats-stream\"}[1m]) * 8",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -1369,8 +1344,8 @@
       "pluginVersion": "12.4.1",
       "targets": [
         {
-          "editorMode": "code",
-          "expr": "srl_nokia_interfaces_interface_traffic_rate_in_bps{subscription_name=\"srl-if-stats\"}",
+          "editorMode": "builder",
+          "expr": "srl_nokia_interfaces_interface_traffic_rate_in_bps{subscription_name=\"srl-if-stats-stream\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -1391,7 +1366,21 @@
     "from": "now-15m",
     "to": "now"
   },
-  "timepicker": {},
+  "timepicker": {
+    "refresh_intervals": [
+      "3s",
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
   "timezone": "browser",
   "title": "New dashboard",
   "uid": "gvrph7",
