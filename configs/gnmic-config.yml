@@ -12,8 +12,9 @@ targets:
 subscriptions:    
   srl-if-stats:
     mode: stream
-    stream-mode: sample
-    sample-interval: 5s
+    stream-mode: on-change
+    heartbeat-interval: 1s
+    suppress-redundant: true
     paths:
       - /interface[name=ethernet-1/*]/statistics/in-discarded-packets
       - /interface[name=ethernet-1/*]/statistics/in-error-packets
