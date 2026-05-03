@@ -13,6 +13,7 @@ subscriptions:
   srl-if-stats:
     mode: stream
     stream-mode: on-change
+    heartbeat-interval: true
     suppress-redundant: true
     paths:
       - /interface[name=ethernet-1/*]/statistics/in-discarded-packets
@@ -32,8 +33,7 @@ subscriptions:
 
   srl-bridge-table:
     mode: stream
-    stream-mode: sample
-    sample-interval: 5s
+    stream-mode: on-change
     paths:
       - /network-instance[name=lanswitch]/bridge-table/statistics/total-entries    
       
