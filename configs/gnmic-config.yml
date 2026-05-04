@@ -36,12 +36,6 @@ subscriptions:
       - /interface[name=ethernet-1/*]/statistics/out-multicast-packets
       - /interface[name=ethernet-1/*]/statistics/out-broadcast-packets
       
-  srl-bridge-table:
-    mode: stream
-    stream-mode: on-change
-    paths:
-      - /network-instance[name=lanswitch]/bridge-table/statistics/total-entries    
-      
 outputs:
   
   prom-output:
