@@ -10,13 +10,6 @@ targets:
     address: srlswitch2:57400
     
 subscriptions:    
-
-  srl-system-performance:
-    mode: stream
-    stream-mode: sample
-    sample-interval: 5s
-    paths:
-      - /platform/control[slot=*]/cpu[index=*]/total/average-1
   
   srl-if-stats-stream:
     mode: stream
