@@ -16,7 +16,8 @@ subscriptions:
     stream-mode: sample
     sample-interval: 5s
     paths:
-      - /platform/control[slot=*]/cpu[index=all]/total 
+      - /platform/control[slot=*]/cpu[index=all]/total/instant 
+        
   
   srl-if-stats-stream:
     mode: stream
