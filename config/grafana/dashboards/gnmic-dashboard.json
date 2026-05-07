@@ -965,7 +965,7 @@
       "targets": [
         {
           "editorMode": "code",
-          "expr": "rate(srl_nokia_interfaces_interface_traffic_rate_out_bps{subscription_name=\"srl-if-stats-stream\"}[1m])",
+          "expr": "srl_nokia_interfaces_interface_traffic_rate_out_bps{subscription_name=\"srl-if-stats-stream\"}",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
