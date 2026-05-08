@@ -20,13 +20,7 @@ topology:
       image: ghcr.io/nokia/srlinux:24.10.1
       type: ixr-d3
       startup-config: configs/srlrouter.cfg
-      
-    #arista-router:
-      #kind: arista_veos
-      #mgmt-ipv4: 172.110.110.7
-      #image: vrnetlab/arista_veos:4.35.1F
-      #startup-config: configs/myconfig.txt      
-
+         
     prometheus:
       kind: linux
       mgmt-ipv4: 172.110.110.42
