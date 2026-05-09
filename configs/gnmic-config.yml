@@ -35,7 +35,7 @@ outputs:
     export-timestamps: true
     override-timestamps: false
     interval: 5s
-    buffer-size: 1000
+    buffer-size: 2000
     max-time-series-per-write: 500
     timeout: 10s
     debug: true
