@@ -32,11 +32,9 @@ subscriptions:
     paths:
       - /interface[name=ethernet-1/*]/statistics/in-discarded-packets
       - /interface[name=ethernet-1/*]/statistics/in-error-packets
-      - /interface[name=ethernet-1/*]/statistics/in-broadcast-packets
       - /interface[name=ethernet-1/*]/statistics/out-discarded-packets
       - /interface[name=ethernet-1/*]/statistics/out-error-packets
-      - /interface[name=ethernet-1/*]/statistics/out-broadcast-packets
-      
+            
 outputs:
   
   prom-output:
