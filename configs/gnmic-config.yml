@@ -17,13 +17,11 @@ subscriptions:
     sample-interval: 5s
     paths:
       - /interface[name=ethernet-1/*]/statistics/in-unicast-packets
-      - /interface[name=ethernet-1/*]/statistics/in-octets
       - /interface[name=ethernet-1/*]/statistics/in-multicast-packets
       - /interface[name=ethernet-1/*]/traffic-rate/in-bps
       - /interface[name=ethernet-1/*]/statistics/in-discarded-packets
       - /interface[name=ethernet-1/*]/statistics/in-error-packets
       - /interface[name=ethernet-1/*]/statistics/out-unicast-packets
-      - /interface[name=ethernet-1/*]/statistics/out-octets
       - /interface[name=ethernet-1/*]/statistics/out-multicast-packets
       - /interface[name=ethernet-1/*]/statistics/out-discarded-packets
       - /interface[name=ethernet-1/*]/statistics/out-error-packets
