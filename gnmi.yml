@@ -20,6 +20,16 @@ topology:
       image: ghcr.io/nokia/srlinux:24.10.1
       type: ixr-d3
       startup-config: configs/srlrouter.cfg
+
+    victoriametrics:
+      kind: linux
+      mgmt-ipv4: 172.110.110.41
+      image: victoriametrics/victoria-metrics:latest
+      binds:
+        - ./topologias/victoria-data:/storage
+      cmd: --storageDataPath=/storage
+      ports:
+        - 8428:8428  
          
     prometheus:
       kind: linux
