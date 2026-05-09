@@ -40,5 +40,10 @@ subscriptions:
 outputs:
   
   prom-output:
-    type: prometheus
-    listen: :9273        
+    type: prometheus_write
+    url: http://victoriametrics:8428/api/v1/write
+    interval: 5s
+    buffer-size: 1000
+    max-time-series-per-write: 500
+    timeout: 10s
+    debug: false
