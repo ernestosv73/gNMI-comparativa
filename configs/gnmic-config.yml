@@ -36,6 +36,6 @@ outputs:
     override-timestamps: false
     interval: 5s
     buffer-size: 2000
-    max-time-series-per-write: 500
+    max-time-series-per-write: 1000
     timeout: 10s
     debug: true
