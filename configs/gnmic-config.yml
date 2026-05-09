@@ -32,6 +32,8 @@ outputs:
   victoria-output:
     type: prometheus_write
     url: http://victoriametrics:8428/api/v1/write
+    export-timestamps: true
+    override-timestamps: false
     interval: 5s
     buffer-size: 1000
     max-time-series-per-write: 500
