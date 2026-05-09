@@ -14,7 +14,7 @@ subscriptions:
   srl-if-stats-stream:
     mode: stream
     stream-mode: sample
-    sample-interval: 5s
+    sample-interval: 1s
     paths:
       - /interface[name=ethernet-1/*]/statistics/in-unicast-packets
       - /interface[name=ethernet-1/*]/statistics/in-multicast-packets
@@ -32,7 +32,7 @@ outputs:
   victoria-output:
     type: prometheus_write
     url: http://victoriametrics:8428/api/v1/write
-    interval: 5s
+    interval: 1s
     buffer-size: 1000
     max-time-series-per-write: 500
     timeout: 10s
