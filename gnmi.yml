@@ -26,7 +26,7 @@ topology:
       mgmt-ipv4: 172.110.110.41
       image: victoriametrics/victoria-metrics:latest
       binds:
-        - ./topologias/victoria-data:/storage
+        - /home/ernesto/topologias/victoria-data:/storage
       cmd: --storageDataPath=/storage
       ports:
         - 8428:8428  
