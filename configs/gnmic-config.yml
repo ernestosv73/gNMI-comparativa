@@ -38,4 +38,4 @@ outputs:
     buffer-size: 1000
     max-time-series-per-write: 500
     timeout: 10s
-    debug: false
+    debug: true
