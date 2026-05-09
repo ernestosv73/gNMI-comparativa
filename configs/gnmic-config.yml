@@ -19,25 +19,19 @@ subscriptions:
       - /interface[name=ethernet-1/*]/statistics/in-unicast-packets
       - /interface[name=ethernet-1/*]/statistics/in-octets
       - /interface[name=ethernet-1/*]/statistics/in-multicast-packets
+      - /interface[name=ethernet-1/*]/traffic-rate/in-bps
+      - /interface[name=ethernet-1/*]/statistics/in-discarded-packets
+      - /interface[name=ethernet-1/*]/statistics/in-error-packets
       - /interface[name=ethernet-1/*]/statistics/out-unicast-packets
       - /interface[name=ethernet-1/*]/statistics/out-octets
       - /interface[name=ethernet-1/*]/statistics/out-multicast-packets
-      - /interface[name=ethernet-1/*]/traffic-rate/in-bps
-      - /interface[name=ethernet-1/*]/traffic-rate/out-bps
-  srl-if-stats-on-change:   
-    mode: stream
-    stream-mode: on-change
-    heartbeat-interval: 5s  
-    suppress-redundant: true
-    paths:
-      - /interface[name=ethernet-1/*]/statistics/in-discarded-packets
-      - /interface[name=ethernet-1/*]/statistics/in-error-packets
       - /interface[name=ethernet-1/*]/statistics/out-discarded-packets
       - /interface[name=ethernet-1/*]/statistics/out-error-packets
-            
+      - /interface[name=ethernet-1/*]/traffic-rate/out-bps
+              
 outputs:
   
-  prom-output:
+  victoria-output:
     type: prometheus_write
     url: http://victoriametrics:8428/api/v1/write
     interval: 5s
