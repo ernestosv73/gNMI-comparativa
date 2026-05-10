@@ -34,3 +34,4 @@ outputs:
     listen: :9273
     export-timestamps: true    # Preserva timestamp del dispositivo [[prometheus_output]]
     override-timestamps: false # No reemplazar con tiempo de scrape
+    debug: true
