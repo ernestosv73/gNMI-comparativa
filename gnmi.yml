@@ -53,7 +53,7 @@ topology:
         - 3000:3000
       env:        
         # env vars to enable anonymous access
-        GF_INSTALL_PLUGINS: "victoriametrics-metrics-datasource"
+        #GF_INSTALL_PLUGINS: "victoriametrics-metrics-datasource"
         F_ORG_ROLE: "Admin"
         GF_ORG_NAME: "Main Org"
         GF_AUTH_ANONYMOUS_ENABLED: "true"
