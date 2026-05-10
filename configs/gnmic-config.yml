@@ -29,13 +29,8 @@ subscriptions:
               
 outputs:
   
-  victoria-output:
-    type: prometheus_write
-    url: http://victoriametrics:8428/api/v1/write
-    export-timestamps: true
-    override-timestamps: false
-    interval: 5s
-    buffer-size: 2000
-    max-time-series-per-write: 1000
-    timeout: 10s
-    debug: false
+  prom-output:
+    type: prometheus
+    listen: :9273
+    export-timestamps: true    # Preserva timestamp del dispositivo [[prometheus_output]]
+    override-timestamps: false # No reemplazar con tiempo de scrape
